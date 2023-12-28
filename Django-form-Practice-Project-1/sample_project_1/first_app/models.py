@@ -1,0 +1,43 @@
+from django.db import models
+
+# Create your models here.
+
+# Django Model:
+class MyModel(models.Model):
+    name = models.CharField(max_length=20)
+    roll = models.IntegerField()
+    address = models.TextField()
+    father_name = models.TextField(default='Rahim')
+    date_field = models.DateField(default=12)
+    boolean_field = models.BooleanField(default=False)
+    char_field = models.CharField(max_length=255, default='DragonFly')
+    auto_field = models.AutoField(primary_key=True, default=True)
+    date_time_field = models.DateTimeField(default=12.23)
+    email_field = models.EmailField(default=None, blank=True)
+    text_field = models.TextField(default='')
+    time_field = models.TimeField(default='12:00')
+    big_integer_field = models.BigIntegerField(default=100000)
+    binary_field = models.BinaryField(default=0)
+    duration_field = models.DurationField(default=10)
+    float_field = models.FloatField(default=0.0)
+    slug_field = models.SlugField(default = 200)
+    small_integer_field = models.SmallIntegerField(default=0)
+    positive_big_integer_field = models.PositiveBigIntegerField(default=100)
+    positive_integer_field = models.PositiveIntegerField(default=1111)
+    positive_small_integer_field = models.PositiveSmallIntegerField(default=0)
+    decimal_field = models.DecimalField(max_digits=5, decimal_places=2, default=2.8)
+    generic_ip_address_field = models.GenericIPAddressField(default=8.8)
+    file_field = models.FileField(upload_to='files/', default=None)
+    file_path_field = models.FilePathField(path='/path/to/files/', default=None)
+    image_field = models.ImageField(upload_to='images/', default=None)
+    integer_field = models.IntegerField(default=2)
+    json_field = models.JSONField(default=None)
+    url_field = models.URLField(default=None)
+    uuid_field = models.UUIDField(default=None)
+    comma_separated_field = models.CharField(validators=[],max_length=255, default=None)
+    # big_auto_field = models.BigAutoField(default=None)
+    # null_boolean_field = models.NullBooleanField(null=True, blank=True)
+    # many_to_many_field = models.ManyToManyField(OtherModel)
+    # foreign_key = models.ForeignKey(OtherModel, on_delete=models.CASCADE)
+    # one_to_one_field = models.OneToOneField(OtherModel, on_delete=models.CASCADE)
+    

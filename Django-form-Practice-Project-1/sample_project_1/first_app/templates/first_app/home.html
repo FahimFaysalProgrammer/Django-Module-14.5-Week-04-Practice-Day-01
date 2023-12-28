@@ -1,0 +1,21 @@
+{% extends 'base.html '%} {% load static %} {% block content %}
+<div class="text-center my-3 py-3" style="background-color: bisque">
+  <h1>This is Home Page</h1>
+</div>
+<section class="text-center text-decoration-none">
+  <div class="m-4">
+    <button class="btn btn-danger">
+      <a class="text-decoration-none link-light" href="{% url 'django_api' %}"
+        >Django API Form</a
+      >
+    </button>
+  </div>
+  <div class="m-4">
+    <button class="btn btn-danger">
+      <a class="text-decoration-none link-light" href="{% url 'django_model' %}"
+        >Django Model</a
+      >
+    </button>
+  </div>
+</section>
+{%endblock%}
